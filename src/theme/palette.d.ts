@@ -1,21 +1,25 @@
 import {type ThemeOptions} from "@mui/material";
-import {colors} from "./colors";
+import colors from "./colors";
 
 declare module '@mui/material/styles' {
     interface Palette {
-        red: typeof colors['Red'] ;
-        green: typeof colors['Green'] ;
-        orange: typeof colors['Orange'] ;
-        blue: typeof colors['Blue'] ;
+        red: colors['Red'];
+        green: colors['Green'];
+        orange: colors['Orange'];
+        blue: colors['Blue'];
+        neutral: colors['Neutral'];
     }
 
     interface PaletteOptions {
-        red: typeof colors['Red'] ;
-        green: typeof colors['Green'] ;
-        orange: typeof colors['Orange'] ;
-        blue: typeof colors['Blue'] ;
+        red: colors['Red'];
+        green: colors['Green'];
+        orange: colors['Orange'];
+        blue: colors['Blue'];
+        neutral: colors['Neutral'];
     }
 }
+
+// console.log(colors);
 
 export const palette: Pick<
     Exclude<ThemeOptions['palette'], undefined>,
@@ -24,14 +28,16 @@ export const palette: Pick<
     | 'success'
     | 'error'
     | 'warning'
+    | 'text'
     | 'red'
     | 'green'
     | 'orange'
     | 'blue'
+    | 'neutral'
 > = {
     primary: {
         light: '#0078CD',
-        main: '#00528C',
+        main: colors.Blue.main,
         dark: '#002A48'
     },
     secondary: {
@@ -39,16 +45,25 @@ export const palette: Pick<
         main: '#F1D092',
         dark: '#EEC77E'
     },
+    success: {
+        main: '#A9FFA7'
+    },
+    error: {
+        main: '#E8502F',
+    },
+    warning: {
+        main: '#E8502F',
+    },
+    text: {
+        main: '#000000',
+    },
     red: {
         main: '#FF564F',
     },
     green: {
-        main '#34C759',
+        main: '#A9FFA7',
     },
-    orange: {
-        main '#FF912C'
-    },
-    blue: {
-        blue '#00A7E7'
+    neutral: {
+        // light: colors.Neutral[0],
     }
 }
