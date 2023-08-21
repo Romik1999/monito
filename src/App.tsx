@@ -15,16 +15,12 @@ import THEME from "./theme";
 import {Typography} from "@mui/material";
 
 function App() {
-
-    console.log(THEME.palette.custom);
     return (
         <ThemeProvider theme={THEME}>
             <div className="App">
                 <header className="App-header">
                     <Typography
                         variant={'h1'}
-                        // color={THEME.palette.custom}
-                        sx={{color: `${THEME.palette.custom.main}`}}
                     >
                         Hello word!
                     </Typography>
