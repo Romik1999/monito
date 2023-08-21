@@ -1,59 +1,23 @@
-import {type ThemeOptions} from "@mui/material";
-import {colors} from "./colors";
+import colors from "./colors";
+import {lime, purple} from "@mui/material/colors";
+
 
 declare module '@mui/material/styles' {
     interface Palette {
-        red: typeof colors['Red'];
-        green: typeof colors['Green'];
-        orange: typeof colors['Orange'];
-        blue: typeof colors['Blue'];
+        custom: Palette['primary'];
     }
 
     interface PaletteOptions {
-        red: typeof colors['Red'];
-        green: typeof colors['Green'];
-        orange: typeof colors['Orange'];
-        blue: typeof colors['Blue'];
+        custom?: PaletteOptions['primary'];
     }
 }
 
-export const palette: Pick<
-    Exclude<ThemeOptions['palette'], undefined>,
-    | 'primary'
-    | 'secondary'
-    | 'success'
-    | 'error'
-    | 'warning'
-    | 'text'
-    | 'red'
-    | 'green'
-    | 'orange'
-    | 'blue'
-> = {
-    primary: {
-        light: colors.Blue[40],
-        main: colors.Blue[40],
-        dark: colors.Blue[40]
-    },
-    secondary: {
-        light: colors.Yellow[40],
-        main: colors.Yellow[40],
-        dark: colors.Yellow[40]
-    },
-    success: {
-        main: '#A9FFA7'
-    },
-    error: {
-        main: '#E8502F',
-    },
-    warning: {
-        main: '#E8502F',
-    },
-    text: {},
-    red: {
-        main: colors.Red,
-    },
-    green: {
-        main: colors.Green[40],
+const palette = {
+    primary: lime,
+    secondary: purple,
+    custom: {
+        main: colors.Orange.main
     }
 }
+
+export default palette

@@ -11,19 +11,20 @@ import CheckIcon from '@mui/icons-material/Check';
 import TextsmsOutlinedIcon from '@mui/icons-material/TextsmsOutlined';
 import EastRoundedIcon from '@mui/icons-material/EastRounded';
 import {ThemeProvider} from "@mui/styles";
-import {THEME} from "./theme";
+import THEME from "./theme";
 import {Typography} from "@mui/material";
 
 function App() {
 
-    console.log(THEME.palette);
+    console.log(THEME.palette.custom);
     return (
         <ThemeProvider theme={THEME}>
             <div className="App">
                 <header className="App-header">
                     <Typography
                         variant={'h1'}
-                        // color={theme.palette.salmon.main}
+                        // color={THEME.palette.custom}
+                        sx={{color: `${THEME.palette.custom.main}`}}
                     >
                         Hello word!
                     </Typography>
