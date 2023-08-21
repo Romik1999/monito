@@ -4,6 +4,6 @@ import {typography} from "./typography";
 
 const THEME = createTheme({
     palette,
-    typography
+    typography,
 });
 export default THEME
