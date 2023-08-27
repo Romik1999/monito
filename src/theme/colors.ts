@@ -22,6 +22,9 @@ const colors = {
     },
     BlueSea:{
         main: '#00A7E7',
+    },
+    White: {
+        main: '#FDFDFD',
     }
 }
 

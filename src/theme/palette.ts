@@ -7,6 +7,7 @@ declare module '@mui/material/styles' {
         green: Palette['primary'];
         orange: Palette['primary'];
         blueSea: Palette['primary'];
+        white: Palette['primary'];
     }
 
     interface PaletteOptions {
@@ -14,6 +15,7 @@ declare module '@mui/material/styles' {
         green?: PaletteOptions['primary'];
         orange?: PaletteOptions['primary'];
         blueSea?: PaletteOptions['primary'];
+        white?: PaletteOptions['primary'];
     }
 }
 
@@ -34,11 +36,14 @@ const palette = {
     green: {
         main: colors.Green.main,
     },
-    orange:{
+    orange: {
         main: colors.Orange.main
     },
-    blueSea:{
+    blueSea: {
         main: colors.BlueSea.main
+    },
+    white: {
+        main: colors.White.main
     }
 }
 

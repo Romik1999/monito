@@ -1,5 +1,5 @@
-import theme from "./index";
 import {Components, Theme} from "@mui/material";
+import palette from "./palette";
 
 const button:Components[`MuiButton`] = {
     styleOverrides:{
@@ -7,15 +7,17 @@ const button:Components[`MuiButton`] = {
             const {palette} = theme as Theme
             return {
                 padding: `14px 28px 10px`,
-                color: "red"
-            }
+                color: "red",
+                borderRadius: '57px'
+        }
         }
     },
     variants:[
         {
-            props:{color: 'secondary'},
+            props:{color: 'primary'},
             style:{
-                backgroundColor: '#003459'
+                backgroundColor: palette.primary.main,
+                color: palette.white.main
             }
         }
     ]
