@@ -10,20 +10,19 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import CheckIcon from '@mui/icons-material/Check';
 import TextsmsOutlinedIcon from '@mui/icons-material/TextsmsOutlined';
 import EastRoundedIcon from '@mui/icons-material/EastRounded';
-import {ThemeProvider} from "@mui/styles";
-import {THEME} from "./theme";
-import {Typography} from "@mui/material";
+import {ThemeProvider} from "@mui/material/styles";
+import THEME from "./theme";
+import {Button, Typography} from "@mui/material";
+import Input from "./components/input";
+import MyButton from "./components/MyButton";
 
 function App() {
-
-    console.log(THEME.palette);
     return (
         <ThemeProvider theme={THEME}>
             <div className="App">
                 <header className="App-header">
                     <Typography
                         variant={'h1'}
-                        // color={theme.palette.salmon.main}
                     >
                         Hello word!
                     </Typography>
@@ -38,6 +37,16 @@ function App() {
                     <TextsmsOutlinedIcon/>
                     <EastRoundedIcon/>
                 </header>
+                <Input name={'nameIcon'}/>
+                <MyButton
+                    variant={"startIcon"}
+                    color={"secondary"}
+                >
+                    text 1
+                </MyButton>
+                <MyButton variant={"endIcon"}>
+                    text 2
+                </MyButton>
             </div>
         </ThemeProvider>
     );

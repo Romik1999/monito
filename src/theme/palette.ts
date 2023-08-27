@@ -1,59 +1,45 @@
-import {type ThemeOptions} from "@mui/material";
-import {colors} from "./colors";
+import colors from "./colors";
+
 
 declare module '@mui/material/styles' {
     interface Palette {
-        red: typeof colors['Red'];
-        green: typeof colors['Green'];
-        orange: typeof colors['Orange'];
-        blue: typeof colors['Blue'];
+        red: Palette['primary'];
+        green: Palette['primary'];
+        orange: Palette['primary'];
+        blueSea: Palette['primary'];
     }
 
     interface PaletteOptions {
-        red: typeof colors['Red'];
-        green: typeof colors['Green'];
-        orange: typeof colors['Orange'];
-        blue: typeof colors['Blue'];
+        red?: PaletteOptions['primary'];
+        green?: PaletteOptions['primary'];
+        orange?: PaletteOptions['primary'];
+        blueSea?: PaletteOptions['primary'];
     }
 }
 
-export const palette: Pick<
-    Exclude<ThemeOptions['palette'], undefined>,
-    | 'primary'
-    | 'secondary'
-    | 'success'
-    | 'error'
-    | 'warning'
-    | 'text'
-    | 'red'
-    | 'green'
-    | 'orange'
-    | 'blue'
-> = {
+const palette = {
     primary: {
         light: colors.Blue[40],
-        main: colors.Blue[40],
-        dark: colors.Blue[40]
+        main: colors.Blue[60],
+        dark: colors.Blue[80]
     },
     secondary: {
         light: colors.Yellow[40],
-        main: colors.Yellow[40],
-        dark: colors.Yellow[40]
+        main: colors.Yellow[60],
+        dark: colors.Yellow[80]
     },
-    success: {
-        main: '#A9FFA7'
-    },
-    error: {
-        main: '#E8502F',
-    },
-    warning: {
-        main: '#E8502F',
-    },
-    text: {},
     red: {
-        main: colors.Red,
+        main: colors.Red.main,
     },
     green: {
-        main: colors.Green[40],
+        main: colors.Green.main,
+    },
+    orange:{
+        main: colors.Orange.main
+    },
+    blueSea:{
+        main: colors.BlueSea.main
     }
 }
+
+export default palette
