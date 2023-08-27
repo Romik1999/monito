@@ -17,13 +17,22 @@ declare module '@mui/material/styles' {
         blueSea?: PaletteOptions['primary'];
         white?: PaletteOptions['primary'];
     }
+
+    interface PaletteColor {
+        darker?: string;
+    }
+
+    interface SimplePaletteColorOptions {
+        darker?: string;
+    }
 }
 
 const palette = {
     primary: {
         light: colors.Blue[40],
-        main: colors.Blue[60],
-        dark: colors.Blue[80]
+        main: colors.Blue[100],
+        dark: colors.Blue[80],
+        darker: colors.Blue[60]
     },
     secondary: {
         light: colors.Yellow[40],

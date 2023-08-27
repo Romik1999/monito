@@ -40,11 +40,14 @@ function App() {
                 <Input name={'nameIcon'}/>
                 <MyButton
                     variant={"startIcon"}
-                    color={"secondary"}
+                    color={"primary"}
                 >
                     text 1
                 </MyButton>
-                <MyButton variant={"endIcon"}>
+                <MyButton
+                    variant={"endIcon"}
+                    color={"secondary"}
+                >
                     text 2
                 </MyButton>
             </div>
