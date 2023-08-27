@@ -10,9 +10,11 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import CheckIcon from '@mui/icons-material/Check';
 import TextsmsOutlinedIcon from '@mui/icons-material/TextsmsOutlined';
 import EastRoundedIcon from '@mui/icons-material/EastRounded';
-import {ThemeProvider} from "@mui/styles";
+import {ThemeProvider} from "@mui/material/styles";
 import THEME from "./theme";
-import {Typography} from "@mui/material";
+import {Button, Typography} from "@mui/material";
+import Input from "./components/input";
+import MyButton from "./components/MyButton";
 
 function App() {
     return (
@@ -35,6 +37,16 @@ function App() {
                     <TextsmsOutlinedIcon/>
                     <EastRoundedIcon/>
                 </header>
+                <Input name={'nameIcon'}/>
+                <MyButton
+                    variant={"startIcon"}
+                    color={"secondary"}
+                >
+                    text 1
+                </MyButton>
+                <MyButton variant={"endIcon"}>
+                    text 2
+                </MyButton>
             </div>
         </ThemeProvider>
     );
