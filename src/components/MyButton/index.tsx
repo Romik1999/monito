@@ -1,6 +1,5 @@
 import React from 'react';
-import {Button, ButtonProps, TextField} from "@mui/material";
-import {IPropsInput} from "../../common/types/components";
+import {Button, ButtonProps} from "@mui/material";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import TwitterIcon from '@mui/icons-material/Twitter';
 
