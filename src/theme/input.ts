@@ -18,7 +18,7 @@ const input: Components[`MuiInput`] = {
                     color: `${palette.primary.main}`,
                     transition: `0.2s`,
                     '&:focus': {
-                        boxShadow: `0px 0px 5px 0px ${palette.primary.main}}`,
+                        boxShadow: `0px 0px 5px 0px ${palette.primary.main}`,
                     },
                     '&:placeholder':{
                         fontSize: `14px`,

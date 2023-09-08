@@ -12,9 +12,10 @@ import TextsmsOutlinedIcon from '@mui/icons-material/TextsmsOutlined';
 import EastRoundedIcon from '@mui/icons-material/EastRounded';
 import {ThemeProvider} from "@mui/material/styles";
 import THEME from "./theme";
-import {TextField, Typography} from "@mui/material";
+import {Typography} from "@mui/material";
 import MyButton from "./components/MyButton";
 import MyInput from "./components/MyInput";
+import MyCheckbox from "./components/MyCheckbox";
 
 function App() {
     return (
@@ -54,7 +55,8 @@ function App() {
                     placeholder={'123123123'}
                     border={"round"}
                 />
-                <TextField/>
+
+                <MyCheckbox/>
             </div>
         </ThemeProvider>
     );
