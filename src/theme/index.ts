@@ -4,6 +4,7 @@ import {typography} from "./typography";
 import button from "./button";
 import input from "./input";
 import checkbox from "./checkbox";
+import select from "./select";
 
 const THEME = createTheme({
     palette,
@@ -17,6 +18,9 @@ const THEME = createTheme({
         },
         MuiFormControlLabel:{
             ...checkbox
+        },
+        MuiFormControl:{
+            ...select
         }
     }
 });

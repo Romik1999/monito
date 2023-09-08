@@ -16,6 +16,7 @@ import {Typography} from "@mui/material";
 import MyButton from "./components/MyButton";
 import MyInput from "./components/MyInput";
 import MyCheckbox from "./components/MyCheckbox";
+import MySelect from "./components/MySelect";
 
 function App() {
     return (
@@ -57,6 +58,8 @@ function App() {
                 />
 
                 <MyCheckbox/>
+
+                <MySelect/>
             </div>
         </ThemeProvider>
     );
