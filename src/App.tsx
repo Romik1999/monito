@@ -12,9 +12,9 @@ import TextsmsOutlinedIcon from '@mui/icons-material/TextsmsOutlined';
 import EastRoundedIcon from '@mui/icons-material/EastRounded';
 import {ThemeProvider} from "@mui/material/styles";
 import THEME from "./theme";
-import {Button, Typography} from "@mui/material";
-import Input from "./components/input";
+import {TextField, Typography} from "@mui/material";
 import MyButton from "./components/MyButton";
+import MyInput from "./components/MyInput";
 
 function App() {
     return (
@@ -37,7 +37,6 @@ function App() {
                     <TextsmsOutlinedIcon/>
                     <EastRoundedIcon/>
                 </header>
-                <Input name={'nameIcon'}/>
                 <MyButton
                     variant={"startIcon"}
                     color={"primary"}
@@ -50,6 +49,12 @@ function App() {
                 >
                     text 2
                 </MyButton>
+
+                <MyInput
+                    placeholder={'123123123'}
+                    border={"round"}
+                />
+                <TextField/>
             </div>
         </ThemeProvider>
     );
