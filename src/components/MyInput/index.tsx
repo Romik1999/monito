@@ -1,12 +1,13 @@
 import React from 'react';
-import {Input, InputProps} from "@mui/material";
+import {Input, InputProps, Typography} from "@mui/material";
 
-interface IMyInputProps extends Omit<InputProps, `variant`> {
-    border: 'square' | 'round'
+interface IMyInputProps extends InputProps {
+    border: 'square' | 'round',
+    errorMassage?: string
 }
 
 const MyInput = (props: IMyInputProps) => {
-    const {name, placeholder, border , ...rest} = props
+    const {name, placeholder, border , errorMassage, ...rest} = props
     return (
         <>
             <Input
@@ -15,6 +16,7 @@ const MyInput = (props: IMyInputProps) => {
                 placeholder={placeholder}
                 {...rest}
             />
+            {errorMassage && <Typography>{errorMassage}</Typography> }
         </>
     );
 };

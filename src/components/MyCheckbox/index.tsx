@@ -1,10 +1,14 @@
 import React from 'react';
-import {Checkbox, CheckboxProps, FormControlLabel} from "@mui/material";
+import {Checkbox, CheckboxProps, FormControlLabel, SxProps} from "@mui/material";
 
-const MyCheckbox = (props: CheckboxProps) => {
+interface IMyCheckbox extends CheckboxProps{
+    formSX?: SxProps,
+}
+const MyCheckbox = (props: IMyCheckbox) => {
+    const {formSX, ...rest } = props
     return (
         <>
-            <FormControlLabel control={<Checkbox/>} label="Label" />
+            <FormControlLabel sx={{...formSX}} control={<Checkbox {...rest}/>} label="Label" />
         </>
     );
 };
