@@ -2,7 +2,7 @@ import React from 'react';
 import {Input, InputProps, Typography} from "@mui/material";
 
 interface IMyInputProps extends InputProps {
-    border: 'square' | 'round',
+    border?: 'square' | 'round',
     errorMassage?: string
 }
 
