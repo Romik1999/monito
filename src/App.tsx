@@ -12,7 +12,7 @@ import TextsmsOutlinedIcon from '@mui/icons-material/TextsmsOutlined';
 import EastRoundedIcon from '@mui/icons-material/EastRounded';
 import {ThemeProvider} from "@mui/material/styles";
 import THEME from "./theme";
-import {Typography} from "@mui/material";
+import {MenuItem, Typography} from "@mui/material";
 import MyButton from "./components/MyButton";
 import MyInput from "./components/MyInput";
 import MyCheckbox from "./components/MyCheckbox";
@@ -59,7 +59,11 @@ function App() {
 
                 <MyCheckbox/>
 
-                <MySelect/>
+                <MySelect name="cost">
+                    <MenuItem value="11111">11111</MenuItem>
+                    <MenuItem value="22222">22222</MenuItem>
+                    <MenuItem value="33333">33333</MenuItem>
+                </MySelect>
             </div>
         </ThemeProvider>
     );

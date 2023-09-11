@@ -1,25 +1,23 @@
 import React from 'react';
-import {FormControl, InputLabel, MenuItem, Select, SelectProps} from "@mui/material";
+import {FormControl, InputLabel, Select, SelectProps} from "@mui/material";
 
 interface IMySelectProps extends SelectProps {
-
+    label?: '' | string,
+    name?: '' | string,
 }
 
 const MySelect = (props: IMySelectProps) => {
-    const {label, ...rest} = props
+    const {label, name, children, ...rest} = props
     return (
         <>
-            {label}
             <FormControl fullWidth>
-                {label && label!=='' ? <InputLabel id="demo-simple-select-label">{label}</InputLabel> : ''}
+                {label && label!=='' ? <InputLabel id={name}>{label}</InputLabel> : ''}
                 <Select
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
-                    label="Age"
+                    name={name}
+                    id={name}
+                    {...rest}
                 >
-                    <MenuItem value={10}>Ten</MenuItem>
-                    <MenuItem value={20}>Twenty</MenuItem>
-                    <MenuItem value={30}>Thirty</MenuItem>
+                    {children}
                 </Select>
             </FormControl>
         </>
