@@ -2,20 +2,17 @@ import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import {navMenu} from "../../common/moks/navigate";
-import {ListItem} from "@mui/material";
+import {IconButton, ListItem} from "@mui/material";
 import {useNavigate} from "react-router-dom";
 import logo from "../../assets/images/common/logo.svg"
-import {Search} from "@mui/icons-material";
-import SearchIcon from '@mui/icons-material/Search';
-import MyInput from "../MyInput";
 
 function ResponsiveAppBar() {
+
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
 
     const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -36,9 +33,8 @@ function ResponsiveAppBar() {
         )
     })
 
-
     return (
-        <AppBar position="static">
+        <AppBar position="static" color="transparent">
             <Container maxWidth="xl">
                 <Toolbar>
                     <IconButton
@@ -48,41 +44,33 @@ function ResponsiveAppBar() {
                         aria-haspopup="true"
                         onClick={handleOpenNavMenu}
                         color="inherit"
+                        sx={{
+                            display: {xs: 'block', md: 'block'},
+                        }}
                     >
                         <MenuIcon/>
                     </IconButton>
-
                     <img src={logo} alt="logo"/>
-
-                    <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}>
-                        <Menu
-                            id="menu-appbar"
-                            anchorEl={anchorElNav}
-                            anchorOrigin={{
-                                vertical: 'bottom',
-                                horizontal: 'left',
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: 'top',
-                                horizontal: 'left',
-                            }}
-                            open={Boolean(anchorElNav)}
-                            onClose={handleCloseNavMenu}
-                            sx={{
-                                display: {xs: 'block', md: 'none'},
-                            }}
-                        >
-                            {renderNavMenu}
-                        </Menu>
-                    </Box>
-                    <Search>
-                        <SearchIcon/>
-                        <MyInput/>
-                    </Search>
-                    <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
+                    <Menu
+                        id="menu-appbar"
+                        anchorEl={anchorElNav}
+                        anchorOrigin={{
+                            vertical: 'bottom',
+                            horizontal: 'left',
+                        }}
+                        keepMounted
+                        transformOrigin={{
+                            vertical: 'top',
+                            horizontal: 'left',
+                        }}
+                        open={Boolean(anchorElNav)}
+                        onClose={handleCloseNavMenu}
+                        sx={{
+                            display: {xs: 'block', md: 'block'},
+                        }}
+                    >
                         {renderNavMenu}
-                    </Box>
+                    </Menu>
                 </Toolbar>
             </Container>
         </AppBar>
