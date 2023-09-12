@@ -1,13 +1,11 @@
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import {navMenu} from "../../common/moks/navigate";
-import {IconButton, ListItem} from "@mui/material";
+import {IconButton, List, ListItem} from "@mui/material";
 import {useNavigate} from "react-router-dom";
 import logo from "../../assets/images/common/logo.svg"
 
@@ -28,7 +26,7 @@ function ResponsiveAppBar() {
     const renderNavMenu = navMenu.map((element): JSX.Element => {
         return (
             <ListItem key={element.id} onClick={() => navigate(`${element.path}`)}>
-                <Typography variant={"body1"}>{element.name}</Typography>
+                {element.name}
             </ListItem>
         )
     })
@@ -50,27 +48,10 @@ function ResponsiveAppBar() {
                     >
                         <MenuIcon/>
                     </IconButton>
-                    <img src={logo} alt="logo"/>
-                    <Menu
-                        id="menu-appbar"
-                        anchorEl={anchorElNav}
-                        anchorOrigin={{
-                            vertical: 'bottom',
-                            horizontal: 'left',
-                        }}
-                        keepMounted
-                        transformOrigin={{
-                            vertical: 'top',
-                            horizontal: 'left',
-                        }}
-                        open={Boolean(anchorElNav)}
-                        onClose={handleCloseNavMenu}
-                        sx={{
-                            display: {xs: 'block', md: 'block'},
-                        }}
-                    >
+                    <img onClick={()=>{navigate('/')}} src={logo} alt="logo"/>
+                    <List>
                         {renderNavMenu}
-                    </Menu>
+                    </List>
                 </Toolbar>
             </Container>
         </AppBar>
