@@ -4,7 +4,7 @@ import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import TwitterIcon from '@mui/icons-material/Twitter';
 
 interface IMyButtonProps extends Omit<ButtonProps, `variant`> {
-    variant: `startIcon` | `endIcon`
+    variant?: `startIcon` | `endIcon`
 }
 
 const MyButton = (props: IMyButtonProps) => {

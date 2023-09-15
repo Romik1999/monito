@@ -1,13 +1,16 @@
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import {navMenu} from "../../common/moks/navigate";
-import {IconButton, List, ListItem} from "@mui/material";
+import {IconButton, List, ListItem, MenuItem} from "@mui/material";
 import {useNavigate} from "react-router-dom";
 import logo from "../../assets/images/common/logo.svg"
+import MyButton from "../MyButton";
+import MySelect from "../MySelect";
+import {currency} from "../../common/moks/currency";
+import MyInput from "../MyInput";
 
 function ResponsiveAppBar() {
 
@@ -31,10 +34,28 @@ function ResponsiveAppBar() {
         )
     })
 
+    const renderCurrentItems = currency.map((element): JSX.Element => {
+        return (
+            <MenuItem
+                key={element.id}
+            >
+                {element.icon}
+                {element.name}
+            </MenuItem>
+        )
+    })
+
     return (
         <AppBar position="static" color="transparent">
             <Container maxWidth="xl">
-                <Toolbar>
+                <Toolbar
+                    sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        columnGap: "25px",
+                        justifyContent: 'spaceBetween'
+                    }}
+                >
                     <IconButton
                         size="large"
                         aria-label="account of current user"
@@ -43,15 +64,31 @@ function ResponsiveAppBar() {
                         onClick={handleOpenNavMenu}
                         color="inherit"
                         sx={{
-                            display: {xs: 'block', md: 'block'},
+                            display: {xs: 'block', md: 'none'},
                         }}
                     >
                         <MenuIcon/>
                     </IconButton>
-                    <img onClick={()=>{navigate('/')}} src={logo} alt="logo"/>
-                    <List>
+                    <img onClick={() => {
+                        navigate('/')
+                    }} src={logo} alt="logo"/>
+                    <List
+                        sx={{display: 'flex'}}
+                    >
                         {renderNavMenu}
                     </List>
+                    <div className="search">
+                        <MyInput/>
+                    </div>
+                    <MyButton>Join the community</MyButton>
+                    <MySelect
+                        className="currency"
+                        sx={{
+                            maxWidth: '88px'
+                        }}
+                    >
+                        {renderCurrentItems}
+                    </MySelect>
                 </Toolbar>
             </Container>
         </AppBar>
