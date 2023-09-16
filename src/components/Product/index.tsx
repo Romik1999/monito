@@ -11,6 +11,7 @@ interface ProductProps {
 
 const Product = (props: ProductProps) => {
     const {imgSrc, title, age, gene, price} = props
+    console.log(imgSrc);
     const classes = useStyles()
     return (
         <div className={classes.product}>

@@ -1,7 +1,7 @@
 export const products = [
     {
         id: 1,
-        imgSrc: '../../assets/images/dogs/dogs-1.png',
+        imgSrc: 'https://cdnstatic.rg.ru/uploads/images/187/07/30/11.jpg',
         title: 'MO502 - Poodle Tiny Yellow',
         gene: 'Female',
         age: '02 months',
@@ -9,7 +9,7 @@ export const products = [
     },
     {
         id: 2,
-        imgSrc: '../../assets/images/dogs/dogs-2.png',
+        imgSrc: './src/assets/images/dogs/dogs-2.png',
         title: 'MO102 - Poodle Tiny Sepia',
         gene: 'Male',
         age: '02 months',

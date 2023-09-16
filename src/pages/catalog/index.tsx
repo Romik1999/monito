@@ -1,36 +1,18 @@
 import React from 'react';
 import AppBar from "../../components/AppBar";
-import {Box} from "@mui/material";
 import Footer from "../../components/Footer";
 import Container from "@mui/material/Container";
-import Filter from "../../components/Filter";
-import Products from "../../components/Products";
+import CatalogComponent from "../../components/CatalogComponent";
+import catalogBanner from "../../assets/images/catalog/catalog-banner-big.png";
 
 const Catalog = () => {
     return (
         <>
             <AppBar/>
             <main className="main">
+                <img src={catalogBanner} alt="catalog banner"/>
                 <Container maxWidth="lg">
-                    <Box className="catalog">
-                        <Box className="catalog__filter">
-                            <Filter/>
-                        </Box>
-                        <Box className="catalog__content">
-                            <div className="content">
-                                <div className="content__top">
-                                    <div className="content__left">
-                                        <div className="content__title block-title">Small Dog</div>
-                                        <div className="items-count">52 puppies</div>
-                                    </div>
-                                    <div className="content__sort">
-                                        <div className="sort"></div>
-                                    </div>
-                                </div>
-                                <Products/>
-                            </div>
-                        </Box>
-                    </Box>
+                    <CatalogComponent/>
                 </Container>
             </main>
             <Footer/>

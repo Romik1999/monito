@@ -8,6 +8,7 @@ const Products = () => {
     const renderProducts = products.map((element): JSX.Element => {
         return (
             <Product
+                key={element.id}
                 imgSrc={element.imgSrc}
                 title={element.title}
                 gene={element.gene}
