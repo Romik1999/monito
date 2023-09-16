@@ -1,10 +1,11 @@
 import React from 'react';
 import Product from "../Product";
 import {products} from "../../common/moks/products";
+import {useStyles} from "./styles";
 
 const Products = () => {
-
-    const renderProducts = products.map((element):JSX.Element=>{
+    const classes = useStyles()
+    const renderProducts = products.map((element): JSX.Element => {
         return (
             <Product
                 imgSrc={element.imgSrc}
@@ -17,7 +18,7 @@ const Products = () => {
     })
 
     return (
-        <div className="products">
+        <div className={classes.products}>
             {renderProducts}
         </div>
     );

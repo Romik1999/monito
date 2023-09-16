@@ -1,4 +1,5 @@
 import React from 'react';
+import {useStyles} from "./styles";
 
 interface ProductProps {
     imgSrc: string,
@@ -9,18 +10,21 @@ interface ProductProps {
 }
 
 const Product = (props: ProductProps) => {
-    const {imgSrc,title, age, gene, price} = props
+    const {imgSrc, title, age, gene, price} = props
+    const classes = useStyles()
     return (
-        <div className="product">
-            <div className="product__img">
+        <div className={classes.product}>
+            <div className={classes.productImg}>
                 <img src={imgSrc} alt={title}/>
             </div>
-            <div className="product__title">{title}</div>
-            <div className="product__props">
-                <div className="product__prop">Gene: <b>{gene}</b></div>
-                <div className="product__prop">Age: <b>{age}</b></div>
+            <div className={classes.productWrapper}>
+                <div className={classes.productTitle}>{title}</div>
+                <div className={classes.productProps}>
+                    <div className={classes.productProp}>Gene: <b>{gene}</b></div>
+                    <div className={classes.productProp}>Age: <b>{age}</b></div>
+                </div>
+                <div className={classes.productPrice}>{price} VND</div>
             </div>
-            <div className="product__price">{price} VND</div>
         </div>
     );
 };
