@@ -10,7 +10,7 @@ const MySelect = (props: IMySelectProps) => {
     const {label, name, children, ...rest} = props
     return (
         <>
-            <FormControl fullWidth>
+            <FormControl>
                 {label && label!=='' ? <InputLabel id={name}>{label}</InputLabel> : ''}
                 <Select
                     name={name}

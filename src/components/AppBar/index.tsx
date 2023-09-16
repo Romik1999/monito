@@ -38,6 +38,7 @@ function ResponsiveAppBar() {
         return (
             <MenuItem
                 key={element.id}
+                value={element.value}
             >
                 {element.icon}
                 {element.name}
@@ -47,13 +48,13 @@ function ResponsiveAppBar() {
 
     return (
         <AppBar position="static" color="transparent">
-            <Container maxWidth="xl">
+            <Container maxWidth="lg">
                 <Toolbar
                     sx={{
                         display: 'flex',
                         alignItems: 'center',
-                        columnGap: "25px",
-                        justifyContent: 'spaceBetween'
+                        columnGap: "10px",
+                        justifyContent: 'space-between'
                     }}
                 >
                     <IconButton
@@ -84,7 +85,8 @@ function ResponsiveAppBar() {
                     <MySelect
                         className="currency"
                         sx={{
-                            maxWidth: '88px'
+                            maxWidth: '88px',
+                            border: 'none',
                         }}
                     >
                         {renderCurrentItems}
