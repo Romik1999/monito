@@ -11,6 +11,7 @@ import MyButton from "../MyButton";
 import MySelect from "../MySelect";
 import {currency} from "../../common/moks/currency";
 import MyInput from "../MyInput";
+import Logo from "../Logo";
 
 function ResponsiveAppBar() {
 
@@ -70,9 +71,7 @@ function ResponsiveAppBar() {
                     >
                         <MenuIcon/>
                     </IconButton>
-                    <img onClick={() => {
-                        navigate('/')
-                    }} src={logo} alt="logo"/>
+                   <Logo/>
                     <List
                         sx={{display: 'flex'}}
                     >

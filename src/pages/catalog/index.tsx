@@ -2,6 +2,7 @@ import React from 'react';
 import AppBar from "../../components/AppBar";
 import {Box} from "@mui/material";
 import ResponsiveDrawer from "../../components/Filter";
+import Footer from "../../components/Footer";
 
 const Catalog = () => {
     return (
@@ -37,6 +38,7 @@ const Catalog = () => {
                     </div>
                 </Box>
             </Box>
+            <Footer/>
         </>
     );
 };
