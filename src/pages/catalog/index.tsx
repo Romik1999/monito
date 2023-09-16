@@ -4,6 +4,7 @@ import {Box} from "@mui/material";
 import Footer from "../../components/Footer";
 import Container from "@mui/material/Container";
 import Filter from "../../components/Filter";
+import Products from "../../components/Products";
 
 const Catalog = () => {
     return (
@@ -26,6 +27,7 @@ const Catalog = () => {
                                         <div className="sort"></div>
                                     </div>
                                 </div>
+                                <Products/>
                             </div>
                         </Box>
                     </Box>
