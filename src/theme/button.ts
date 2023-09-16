@@ -6,7 +6,8 @@ const button: Components[`MuiButton`] = {
         root: {
             padding: `14px 28px 10px`,
             borderRadius: '57px',
-            boxSizing: "border-box"
+            boxSizing: "border-box",
+            whiteSpace: 'nowrap',
         }
     },
     variants: [

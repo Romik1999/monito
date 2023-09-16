@@ -2,6 +2,7 @@ import React from 'react';
 import {List, ListItem} from "@mui/material";
 import {navMenu} from "../../common/moks/navigate";
 import {useNavigate} from "react-router-dom";
+import {useStyles} from "./styles";
 
 const MainMenu = () => {
     const navigate = useNavigate()
@@ -13,10 +14,12 @@ const MainMenu = () => {
             </ListItem>
         )
     })
+
+    const classes = useStyles()
+
     return (
         <List
-            className="menu"
-            sx={{display: 'flex'}}
+            className={classes.menu}
         >
             {renderNavMenu}
         </List>

@@ -6,7 +6,6 @@ import Container from '@mui/material/Container';
 import {navMenu} from "../../common/moks/navigate";
 import {IconButton, List, ListItem, MenuItem} from "@mui/material";
 import {useNavigate} from "react-router-dom";
-import logo from "../../assets/images/common/logo.svg"
 import MyButton from "../MyButton";
 import MySelect from "../MySelect";
 import {currency} from "../../common/moks/currency";
