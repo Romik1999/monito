@@ -5,17 +5,20 @@ import {Route, Routes} from "react-router-dom";
 import Home from './pages/home';
 import Catalog from './pages/catalog';
 import {CssBaseline} from "@mui/material";
+import AppLayout from "./components/AppLayout";
 
 function App() {
     return (
         <ThemeProvider theme={THEME}>
-            <CssBaseline/>
-            <div className="App">
-                <Routes>
-                    <Route path="/" element={<Home/>}/>
-                    <Route path="/catalog" element={<Catalog/>}/>
-                </Routes>
-            </div>
+            <AppLayout>
+                <CssBaseline/>
+                <div className="App">
+                    <Routes>
+                        <Route path="/" element={<Home/>}/>
+                        <Route path="/catalog" element={<Catalog/>}/>
+                    </Routes>
+                </div>
+            </AppLayout>
         </ThemeProvider>
     );
 }

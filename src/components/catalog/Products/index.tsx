@@ -1,6 +1,6 @@
 import React from 'react';
 import Product from "../Product";
-import {products} from "../../common/moks/products";
+import {products} from "../../../common/moks/products";
 import {useStyles} from "./styles";
 
 const Products = () => {

@@ -1,7 +1,7 @@
 export const products = [
     {
         id: 1,
-        imgSrc: 'https://cdnstatic.rg.ru/uploads/images/187/07/30/11.jpg',
+        imgSrc: 'assets/images/dogs/dog-1.png',
         title: 'MO502 - Poodle Tiny Yellow',
         gene: 'Female',
         age: '02 months',
@@ -9,7 +9,7 @@ export const products = [
     },
     {
         id: 2,
-        imgSrc: './src/assets/images/dogs/dogs-2.png',
+        imgSrc: 'assets/images/dogs/dog-2.png',
         title: 'MO102 - Poodle Tiny Sepia',
         gene: 'Male',
         age: '02 months',
@@ -17,7 +17,7 @@ export const products = [
     },
     {
         id: 3,
-        imgSrc: '../../assets/images/dogs/dogs-3.png',
+        imgSrc: 'assets/images/dogs/dog-3.png',
         title: 'MO512 - Alaskan Malamute Grey',
         gene: 'Male',
         age: '02 months',
@@ -25,7 +25,7 @@ export const products = [
     },
     {
         id: 4,
-        imgSrc: '../../assets/images/dogs/dogs-4.png',
+        imgSrc: '../../assets/images/dogs/dog-4.png',
         title: 'MO502 - Poodle Tiny Yellow',
         gene: 'Female',
         age: '02 months',
@@ -33,7 +33,7 @@ export const products = [
     },
     {
         id: 5,
-        imgSrc: '../../assets/images/dogs/dogs-5.png',
+        imgSrc: '../../assets/images/dogs/dog-5.png',
         title: 'MO502 - Poodle Tiny Yellow',
         gene: 'Female',
         age: '02 months',
@@ -41,7 +41,7 @@ export const products = [
     },
     {
         id: 6,
-        imgSrc: '../../assets/images/dogs/dogs-6.png',
+        imgSrc: '../../assets/images/dogs/dog-6.png',
         title: 'MO502 - Poodle Tiny Yellow',
         gene: 'Female',
         age: '02 months',
@@ -49,7 +49,7 @@ export const products = [
     },
     {
         id: 7,
-        imgSrc: '../../assets/images/dogs/dogs-7.png',
+        imgSrc: '../../assets/images/dogs/dog-7.png',
         title: 'MO502 - Poodle Tiny Yellow',
         gene: 'Female',
         age: '02 months',
@@ -57,7 +57,7 @@ export const products = [
     },
     {
         id: 8,
-        imgSrc: '../../assets/images/dogs/dogs-8.png',
+        imgSrc: '../../assets/images/dogs/dog-8.png',
         title: 'MO512 - Alaskan Malamute Grey',
         gene: 'Male',
         age: '05 months',

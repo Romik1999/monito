@@ -1,6 +1,6 @@
 import React from 'react';
-import MyCheckbox from "../MyCheckbox";
-import MyInput from "../MyInput";
+import MyCheckbox from "../../UI/MyCheckbox";
+import MyInput from "../../UI/MyInput";
 
 const Filter = () => {
     return (

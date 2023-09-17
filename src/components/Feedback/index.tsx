@@ -1,7 +1,7 @@
 import React from 'react';
 import {Typography} from "@mui/material";
-import MyInput from "../MyInput";
-import MyButton from "../MyButton";
+import MyInput from "../UI/MyInput";
+import MyButton from "../UI/MyButton";
 import {useStyles} from "./styles";
 
 const Feedback = () => {

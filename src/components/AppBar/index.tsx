@@ -6,10 +6,10 @@ import Container from '@mui/material/Container';
 import {navMenu} from "../../common/moks/navigate";
 import {IconButton, List, ListItem, MenuItem} from "@mui/material";
 import {useNavigate} from "react-router-dom";
-import MyButton from "../MyButton";
-import MySelect from "../MySelect";
+import MyButton from "../UI/MyButton";
+import MySelect from "../UI/MySelect";
 import {currency} from "../../common/moks/currency";
-import MyInput from "../MyInput";
+import MyInput from "../UI/MyInput";
 import Logo from "../Logo";
 
 function ResponsiveAppBar() {
