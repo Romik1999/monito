@@ -32,7 +32,7 @@ const checkbox: Components[`MuiFormControlLabel`] = {
                     }
                 },
                 '& .MuiTypography-root': {
-                    color: `${palette.primary.main}`,
+                    color: '#00171F',
                     fontSize: '14px',
                     fontWeight: '500',
                     lineHeight: '140%',

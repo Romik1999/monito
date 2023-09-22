@@ -1,34 +1,28 @@
 import React from 'react';
 import {Box} from "@mui/material";
 import Products from "../Products";
-import {useStyles} from "./styles";
 import Filter from "../Filter";
+import BlockTitle from "../BlockTitle";
+import {
+    CatalogComponentWrapper,
 
+} from "./styled";
+import SortComponent from "../SortComponent";
 
 const CatalogComponent = () => {
-
-    const classes = useStyles()
-
     return (
-        <Box className={classes.catalog}>
-            <Box className="catalog__filter">
-                <Filter/>
-            </Box>
+        <CatalogComponentWrapper>
+            <Filter/>
             <Box className="catalog__content">
                 <div className="content">
                     <div className="content__top">
-                        <div className="content__left">
-                            <div className="content__title block-title">Small Dog</div>
-                            <div className="items-count">52 puppies</div>
-                        </div>
-                        <div className="content__sort">
-                            <div className="sort"></div>
-                        </div>
+                        <BlockTitle>Small Dog</BlockTitle>
+                        <SortComponent/>
                     </div>
                     <Products/>
                 </div>
             </Box>
-        </Box>
+        </CatalogComponentWrapper>
     );
 };
 
