@@ -35,9 +35,11 @@ const Filter = () => {
                         <div className="filter-group__inputs">
                             <MyInput
                                 name="min"
+                                type="number"
                             />
                             <MyInput
                                 name="max"
+                                type="number"
                             />
                         </div>
                     </div>

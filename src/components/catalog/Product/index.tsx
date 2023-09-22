@@ -1,5 +1,13 @@
 import React from 'react';
-import {ProductContainer, ProductWrapper} from "./styled";
+import {
+    ProductContainer,
+    ProductImg,
+    ProductProp,
+    ProductTitle,
+    ProductWrapper,
+    ProductPrice, ProductPropsRow
+} from "./styled";
+
 interface ProductProps {
     imgSrc?: string,
     title: string,
@@ -12,16 +20,16 @@ const Product = (props: ProductProps) => {
     const {imgSrc, title, age, gene, price} = props
     return (
         <ProductContainer>
-            <div className="">
+            <ProductImg>
                 <img src={imgSrc} alt={title}/>
-            </div>
+            </ProductImg>
             <ProductWrapper>
-                <div className="">{title}</div>
-                <div className="">
-                    <div className="">Gene: <b>{gene}</b></div>
-                    <div className="">Age: <b>{age}</b></div>
-                </div>
-                <div className="">{price} VND</div>
+                <ProductTitle>{title}</ProductTitle>
+                <ProductPropsRow>
+                    <ProductProp>Gene: <b>{gene}</b></ProductProp>
+                    <ProductProp>Age: <b>{age}</b></ProductProp>
+                </ProductPropsRow>
+                <ProductPrice>{price} VND</ProductPrice>
             </ProductWrapper>
         </ProductContainer>
     );

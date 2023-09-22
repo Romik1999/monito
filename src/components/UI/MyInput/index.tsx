@@ -11,7 +11,6 @@ const MyInput = (props: IMyInputProps) => {
     return (
         <>
             <Input
-                type="text"
                 name={name}
                 placeholder={placeholder}
                 {...rest}
