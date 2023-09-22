@@ -5,7 +5,15 @@ export const CatalogComponentWrapper = styled('div')({
     columnGap: '20px',
 })
 
-export const Filter = styled('div')({
-    maxWidth: '280px',
-    width: '100%'
+export const CatalogComponentContent = styled('div')({
+    display: 'flex',
+    rowGap: '20px',
+    flexDirection: 'column',
+})
+
+export const CatalogComponentTop = styled('div')({
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    columnGap: '20px',
 })
