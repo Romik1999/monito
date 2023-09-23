@@ -23,7 +23,7 @@ interface IData {
 }
 
 const Products = () => {
-    const {data} = useQuery({
+    const {isLoading, error, data} = useQuery({
         queryKey: ['products'],
         queryFn: async () => {
             const {data} = await axios.get(
