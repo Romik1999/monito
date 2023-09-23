@@ -23,33 +23,23 @@ interface IData {
 }
 
 const Products = () => {
-    const {isLoading, error, data} = useQuery({
-        queryKey: ['products'],
-        queryFn: async () => {
-            const {data} = await axios.get(
-                'http://localhost:5000/products'
-            )
-            return data as IData
+    const {isLoading, error, data} = useQuery(
+        ['products', 1],
+        () => axios.get<IData>('http://localhost:5000/products'),
+        {
+            select: ({data}) => data
         }
-    })
-
-    const classes = useStyles()
-    const renderProducts = products.map((element): JSX.Element => {
-        return (
-            <Product
-                key={element.id}
-                imgSrc={element.imgSrc}
-                title={element.title}
-                gene={element.gene}
-                age={element.age}
-                price={element.price}
-            />
-        )
-    })
-
+    )
+    console.log(data);
     return (
-        <div className={classes.products}>
-            {renderProducts}
+        <div>
+            {/*{isLoading ? (*/}
+            {/*    <div>Loading ..</div>*/}
+            {/*) : data ? (*/}
+            {/*    {data}*/}
+            {/*) : (*/}
+            {/*    <h1>Data not founded!</h1>*/}
+            {/*)}*/}
         </div>
     );
 };
