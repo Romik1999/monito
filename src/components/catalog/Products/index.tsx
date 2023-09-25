@@ -4,7 +4,7 @@ import {useQuery} from '@tanstack/react-query'
 import {TodoService} from "../../../services/todo.service";
 
 const Products = () => {
-    const {isLoading, error, data} = useQuery(
+    const {isLoading, data} = useQuery(
         ['products'],
         () => TodoService.getAll(),
         {

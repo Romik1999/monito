@@ -9,6 +9,7 @@ export const CatalogComponentContent = styled('div')({
     display: 'flex',
     rowGap: '20px',
     flexDirection: 'column',
+    width: '100%',
 })
 
 export const CatalogComponentTop = styled('div')({
