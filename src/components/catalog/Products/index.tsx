@@ -1,31 +1,12 @@
 import React from 'react';
 import Product from "../Product";
-import {products} from "../../../common/moks/products";
-import {useStyles} from "./styles";
 import {useQuery} from '@tanstack/react-query'
-import axios from "axios";
-
-interface IData {
-    id: number,
-    slug: string,
-    title: string,
-    imageUrl: string,
-    genderId: number,
-    colorId: number,
-    size: string,
-    categoryId: number,
-    createdAt: string,
-    updatedAt: string,
-    category: {
-        slug: string,
-        title: string
-    }
-}
+import {TodoService} from "../../../services/todo.service";
 
 const Products = () => {
     const {isLoading, error, data} = useQuery(
-        ['products', 1],
-        () => axios.get<IData>('http://localhost:5000/products'),
+        ['products'],
+        () => TodoService.getAll(),
         {
             select: ({data}) => data
         }
@@ -33,13 +14,23 @@ const Products = () => {
     console.log(data);
     return (
         <div>
-            {/*{isLoading ? (*/}
-            {/*    <div>Loading ..</div>*/}
-            {/*) : data ? (*/}
-            {/*    {data}*/}
-            {/*) : (*/}
-            {/*    <h1>Data not founded!</h1>*/}
-            {/*)}*/}
+            {isLoading ? (
+                <div>Loading ..</div>
+            ) : data?.length ? (
+                <div>
+                    {data.map(element => (
+                        <Product
+                            imgSrc={element.imgSrc}
+                            title={element.title}
+                            gene={element.gene}
+                            age={element.age}
+                            price={element.price}
+                        />
+                    ))}
+                </div>
+            ) : (
+                <h1>Data not founded!</h1>
+            )}
         </div>
     );
 };

@@ -11,9 +11,9 @@ import {
 interface ProductProps {
     imgSrc?: string,
     title: string,
-    gene: string,
-    age: string,
-    price: string
+    gene?: string,
+    age?: string,
+    price?: string
 }
 
 const Product = (props: ProductProps) => {
